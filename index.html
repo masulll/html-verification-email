@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999.xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Permintaan Kode OTP</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          const currentYear = new Date().getFullYear();
+          const copyrightElement = document.getElementById("copyright");
+          if (copyrightElement) {
+              copyrightElement.innerHTML = `&copy; ${currentYear} Binar Academy, All rights reserved`;
+          }
+
+
+          const verificationData ={
+              email:'binarlabs@gmail.co.id',
+              password: ["1", "2", "3", "7", "7", "7"],
+            }
+
+          const emailElement= document.getElementById("email");
+          emailElement.innerHTML = `<a href="mailto:${verificationData.email}" style="color: #009DB1; text-decoration: none;"> ${verificationData.email} </a>`
+
+
+
+         
+          const inputs = document.querySelectorAll(".input");
+          verificationData.password.forEach((char, index) => {
+            inputs[index].value = char;
+          });
+      });
+  </script>
+    <style type="text/css">
+
+      @font-face {
+        font-family: "Causten-Regular";
+        src: url('assets/font/Causten-Regular.ttf') format('truetype');
+  
+      }
+      @font-face {
+        font-family: "Causten-Semi-Bold";
+        src: url('./assets/font/Causten-Semi-Bold.ttf') format('truetype');
+    
+  
+      }
+      @font-face {
+        font-family: "Causten-Bold";
+        src: url('./assets/font/Causten-Bold.ttf') format('truetype');
+  
+      }
+
+      body {
+        margin: 0;
+        background-color: #cccccc;
+      }
+      table {
+        border-spacing: 0;
+      }
+      td {
+        padding: 0;
+      }
+      img {
+        border: 0;
+      }
+
+      .styled-text{
+        color: #0A0A0A;
+        font-family: 'Causten-Regular';
+        font-size: 16px;
+        font-weight: 400;
+        word-wrap: break-word;
+
+      }
+      .wrapper {
+        width: 100%;
+        table-layout: fixed;
+        background-color: #cccccc;
+        padding-bottom: 60px;
+      }
+
+      .main {
+        background-color: #ffffff;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 600px;
+        border-spacing: 0;
+        font-family: sans-serif;
+        color: #171a1b;
+      }
+
+      .two-columns {
+        text-align: center;
+        font-size: 0;
+      }
+
+      .two-columns .column {
+        width: 100%;
+        max-width: 300px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+      }
+
+
+        .container{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+    
+          
+        }
+        .input {
+          font-family: 'Causten-Bold';
+          width: 56px;
+          height: 56px;
+          margin: 0 10px;
+          flex-shrink: 0;
+          border: none;
+          border-radius: 4px;
+          background: var(--Grayscale-10, #FFF);
+          box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+          text-align: center;
+          font-size: 36px;
+          cursor: not-allowed;
+          pointer-events: none;
+        }
+
+
+
+
+@media (min-width: 200px ) and (max-width:400px) {
+    .input {
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+        margin: 0 5px;
+    }
+}
+@media (min-width:401px)and (max-width: 600px) {
+    .input {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        margin: 0 5px;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .input {
+        width: 48px;
+        height: 48px;
+        font-size: 30px;
+    }
+}
+      
+    </style>
+
+
+  </head>
+  <body>
+    <center class="wrapper">
+      <table class="main" width="100%">
+        <!-- logo section -->
+        <tr>
+          <td>
+            <table width="100%">
+              <tr>
+                <td class="two-columns">
+                  <table class="column">
+                    <tr>
+                      <td style="padding: 40px 20px 8px">
+                        <a href="/">
+                          <img
+                            src="assets/img/Logo Binar.svg"
+                            alt=""
+                            width="280"
+                            height="60"
+                          />
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- title text button -->
+
+                  <tr>
+                    <table width="100%">
+                    <td style="padding: 0px 40px 40px;text-align: center; ">
+                      <p style=" font-size:24px; font-family: Causten-Semi-Bold">Permintaan Kode OTP</p>
+                        <div class="styled-text" >
+                            <p>Halo, <span id="email" class="email"></span></p>
+                            <p style="margin: -15px 0px 0px;">Kami telah menerima permintaan kode OTP registrasi untuk akun Binar anda. 
+                              Berikut adalah kode OTP Anda:</p>
+                        </div>
+                       
+                    </td>
+                  </tr>
+                  <!-- button -->
+                  <tr>
+                    <table width="100%">
+                    <td>
+                      <div class="container">
+                        <div class="inputs" id="inputs">
+                          <input class="input" type="text"
+                          inputmode="numeric" maxlength="1"  />
+                          <input class="input" type="text"
+                          inputmode="numeric" maxlength="1"  />
+                          <input class="input" type="text"
+                          inputmode="numeric" maxlength="1" />
+                          <input class="input" type="text"
+                            inputmode="numeric" maxlength="1" />
+                          <input class="input" type="text"
+                            inputmode="numeric" maxlength="1" />
+                          <input class="input" type="text"
+                            inputmode="numeric" maxlength="1" />
+                        </div>
+                      </div>
+                       
+                    </td>
+                  </tr>
+                  <!-- footer -->
+                  <tr>
+                    <table width="100%">
+                    <td style="padding: 0px 40px 40px;">
+                        <div style="text-align: left;"class="styled-text">
+
+                            <p>Kode OTP ini hanya berlaku dalam waktu <span><b>5 menit</b></span> 
+                            </p>
+                            <p>Mohon masukkan kode OTP ini dalam halaman Kode OTP setelah register akun. Jangan berikan kode ini kepada siapapun untuk alasan keamanan.</p>
+                            <p>Jika anda butuh bantuan hubungi kami <a target="_blank" href="https://www.binaracademy.com/" style="text-decoration: none; color: #933393;" ><b>Di sini</b></a></p>
+        
+                            <p>Regards,<br> Tim Binar Academy</p>
+                        </div>
+                     
+                        
+                         <p id="copyright" style="text-align: center; font-size: 14px; color: #000; font-family: Causten-Regular;"></p>
+                    
+                       
+                    </td>
+                  </tr>
+                </table>
+
+                </td>
+              </tr>
+                 
+                </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+  </body>
+</html>
